@@ -44,7 +44,7 @@ export function ProblemsSection() {
           style={{ opacity: 0.25 }}
         />
         <div 
-          className="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black/30" 
+          className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/30" 
           style={{ mixBlendMode: "multiply" }}
         />
       </div>
@@ -79,10 +79,10 @@ export function ProblemsSection() {
               }}
             >
               {/* Efecto de iluminación lateral al hover */}
-              <div className="absolute inset-y-0 left-0 w-1 bg-golden/0 group-hover:bg-golden transition-all duration-300"></div>
+              <div className="absolute inset-y-0 left-0 w-1  transition-all duration-300"></div>
               
               <div className="flex flex-col h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-golden/15 to-golden/5 rounded-xl flex items-center justify-center text-3xl mb-6 mx-auto transition-transform group-hover:rotate-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-golden/15 to-golden/5 rounded-xl flex items-center justify-center text-3xl mb-6 mx-auto transition-transform">
                   {problem.emoji}
                 </div>
                 <h3 className="text-xl font-bold text-white text-center mb-4 px-4">
@@ -95,12 +95,6 @@ export function ProblemsSection() {
                 </p>
               </div>
               
-              {/* Indicador de solución */}
-              <div className="absolute -bottom-5 -right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" className="text-golden rotate-45">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                </svg>
-              </div>
             </div>
           ))}
         </div>

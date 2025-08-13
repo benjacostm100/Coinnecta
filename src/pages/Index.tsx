@@ -4,12 +4,14 @@ import { ContentSection } from "@/components/landing/content-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { FAQSection } from "@/components/landing/faq-section";
 import { Footer } from "@/components/landing/footer";
+import { CreatorSection } from "@/components/landing/creator-section";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
       <ProblemsSection />
+      <CreatorSection />
       <ContentSection />
       <TestimonialsSection />
       <FAQSection />

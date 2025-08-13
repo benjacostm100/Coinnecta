@@ -3,13 +3,13 @@ import { CTAButton } from "@/components/ui/cta-button";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative min-h-screen bg-gradient-hero flex items-center justify-center overflow-hidden pb-10 pt-20 lg:pt-28">
+    <section id="inicio" className="relative min-h-screen bg-gradient-hero px-4 flex items-center justify-center overflow-hidden pb-10 pt-20 lg:pt-32">
       {/* Background Image with Overlay - Nueva imagen de Unsplash */}
       <div className="absolute inset-0">
         <img 
           src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
           alt="Emprendedores trabajando en digital" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-overlay" />
       </div>
@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content - Mejor jerarquía */}
           <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground mb-4 lg:mb-6 leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-foreground mb-4 lg:mb-6 leading-tight">
               Convierte tu conocimiento en{" "}
               <span className="text-transparent bg-gradient-golden bg-clip-text">
                 ingresos recurrentes
@@ -35,7 +35,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Domina el sistema <strong className="text-golden">paso a paso</strong> para crear infoproductos escalables y dominar el <u>upsell en Hotmart</u> incluso si no tienes experiencia.
+              Domina el sistema <strong className="text-golden">paso a paso</strong> para crear infoproductos escalables y dominar el <u>upsell</u> incluso si no tienes experiencia.
             </p>
             
             {/* CTA mejorado */}
@@ -73,7 +73,7 @@ export function HeroSection() {
           </div>
           
           {/* Image Section - Más limpia */}
-          <div className="relative hidden lg:block animate-scale-in" style={{ animationDelay: '0.5s' }}>
+          <div className="relative hidden mb-24 lg:block animate-scale-in" style={{ animationDelay: '0.5s' }}>
             <div className="relative z-10 overflow-hidden rounded-2xl border-2 border-golden/30">
               <img 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 

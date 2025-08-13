@@ -90,37 +90,6 @@ export function FAQSection() {
             ))}
           </Accordion>
 
-          {/* Guarantee */}
-          <div className="bg-gradient-section rounded-3xl p-8 lg:p-12 text-center mb-8 lg:mb-12 border border-dark-border/50 animate-fade-in">
-            <div className="text-4xl lg:text-6xl mb-6">🛡️</div>
-            <h3 className="font-display text-2xl lg:text-3xl font-black text-foreground mb-4">
-              Garantía de{" "}
-              <span className="text-golden">30 Días</span>
-            </h3>
-            <p className="text-base lg:text-xl text-muted-foreground mb-6 leading-relaxed">
-              Estamos tan seguros de la calidad de COINNECTA que te ofrecemos una 
-              garantía completa. Si no estás satisfecho por cualquier razón, 
-              te devolvemos el 100% de tu inversión.
-            </p>
-            <div className="grid sm:grid-cols-3 gap-4 lg:gap-6 text-center">
-              <div className="flex flex-col items-center">
-                <div className="text-2xl lg:text-3xl mb-2">✅</div>
-                <p className="font-semibold text-foreground text-sm lg:text-base">Sin Preguntas</p>
-                <p className="text-xs lg:text-sm text-muted-foreground">Proceso simple y rápido</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-2xl lg:text-3xl mb-2">💰</div>
-                <p className="font-semibold text-foreground text-sm lg:text-base">100% Reembolso</p>
-                <p className="text-xs lg:text-sm text-muted-foreground">Devolución completa</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="text-2xl lg:text-3xl mb-2">🤝</div>
-                <p className="font-semibold text-foreground text-sm lg:text-base">Total Confianza</p>
-                <p className="text-xs lg:text-sm text-muted-foreground">Tu satisfacción es nuestra prioridad</p>
-              </div>
-            </div>
-          </div>
-
           {/* Final CTA */}
           <div className="text-center animate-slide-up">
             <div className="bg-golden/10 border border-golden/30 rounded-2xl p-6 lg:p-8 mb-6 lg:mb-8">
