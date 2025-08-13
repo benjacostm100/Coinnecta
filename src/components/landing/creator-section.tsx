@@ -2,89 +2,99 @@ import { CTAButton } from "@/components/ui/cta-button";
 
 export function CreatorSection() {
   return (
-    <section className="relative py-16 lg:py-24 bg-gray-50 overflow-hidden">
-      {/* Fondo texturizado sutil */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] opacity-5"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50/95 via-gray-50/90 to-gray-100/80"></div>
+    <section className="relative px-4 py-20 lg:py-28 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+      {/* Fondo de patron geométrico sutil */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-golden/10 via-transparent to-transparent"></div>
       </div>
 
-      {/* Elementos decorativos */}
-      <div className="absolute top-0 right-0 w-48 h-48 bg-golden/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-golden/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Imagen del creador - Versión más compacta */}
-          <div className="relative order-2 lg:order-1 max-w-md mx-auto lg:mx-0">
-            <div className="relative overflow-hidden rounded-2xl shadow-xl border-4 border-white">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
-                alt="Pascu Moreno - Creador de COINNECTA" 
-                className="w-full h-auto scale-105"
-              />
-              {/* Sello de credibilidad */}
-              <div className="absolute -top-4 -right-4 bg-golden text-black px-4 py-2 rounded-full text-sm font-bold shadow-md">
-                +$2M en ventas
+        <div className="flex flex-col lg:flex-row gap-10 items-center">
+          {/* Imagen del creador - Versión grande y destacada */}
+          <div className="w-full lg:w-1/2 xl:w-5/12">
+            <div className="relative group">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl border-8 border-white transform group-hover:-translate-y-1 transition-all duration-300">
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                  alt="Pascu Moreno - Creador de COINNECTA" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Sellos de credibilidad */}
+              <div className="absolute -bottom-4 -right-4 bg-black text-golden px-5 py-2 rounded-full text-sm font-bold shadow-lg border-2 border-golden">
+                +$3.7M en ventas
+              </div>
+              <div className="absolute -top-4 left-6 bg-golden text-black px-4 py-1 rounded-full text-xs font-bold shadow-md">
+                TOP 1% Upsells
               </div>
             </div>
           </div>
 
-          {/* Contenido */}
-          <div className="order-1 lg:order-2">
-            <span className="inline-block bg-golden/10 text-golden px-4 py-2 rounded-full text-xs font-bold tracking-wider mb-4">
-              EXPERTO EN UPSELL
+          {/* Contenido - Versión potente */}
+          <div className="w-full lg:w-1/2 xl:w-7/12">
+            <span className="inline-block bg-golden/10 text-golden px-4 py-2 rounded-full text-xs font-bold tracking-wider mb-5 uppercase">
+              El Mentor que multiplicará tus ingresos
             </span>
-            
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80">Pascu Moreno</span><br />
-              Creador de COINNECTA
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80">Pascu Moreno </span>
+              Formando emprendedores digitales
             </h2>
-            
-            <div className="prose prose-lg text-gray-600 mb-8 max-w-2xl">
-              <blockquote className="border-l-4 border-golden pl-4 italic text-gray-700">
-                "¿Quieres empezar un negocio rentable desde cero? 👇"
-              </blockquote>
-              
-              <p className="text-gray-600">
-                Te enseñamos <strong>estrategias comprobadas</strong> para vender online sin conocimientos previos ni gran inversión. Especialista en upsells con más de <strong className="text-golden">$2M generados</strong> para mis estudiantes.
+            <div className="prose-xl text-gray-700 mb-8 space-y-4">
+              <p>
+                <strong className="text-golden">"Deja de complicarte"</strong> - Aquí está el sistema exacto que usé para generar <strong>$3,700,000+</strong> en ventas y que ahora enseño a mis alumnos.
               </p>
+              
+              <ul className="space-y-3 pl-5">
+                <li className="flex items-start">
+                  <span className="text-golden mr-2">▸</span>
+                  <span><strong>Método probado</strong> que funciona incluso si empiezas desde $0</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-golden mr-2">▸</span>
+                  <span><strong>Upsells automatizados</strong> que duplican tu ticket promedio</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-golden mr-2">▸</span>
+                  <span><strong>1,500+ alumnos</strong> ya aplicaron el sistema con éxito</span>
+                </li>
+              </ul>
             </div>
 
-            {/* Logros en grid moderno */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-              <div className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-center">
-                <div className="text-2xl font-bold text-golden">+3.7M</div>
-                <div className="text-xs text-gray-500 font-medium">VENTAS</div>
+            {/* Logros destacados */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition-shadow">
+                <div className="text-3xl font-black text-golden">$2M+</div>
+                <div className="text-xs text-gray-600 font-semibold uppercase tracking-wider">Generado por alumnos</div>
               </div>
-              <div className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-center">
-                <div className="text-2xl font-bold text-golden">1.5K+</div>
-                <div className="text-xs text-gray-500 font-medium">ALUMNOS</div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition-shadow">
+                <div className="text-3xl font-black text-golden">217%</div>
+                <div className="text-xs text-gray-600 font-semibold uppercase tracking-wider">Aumento promedio</div>
               </div>
-              <div className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-center">
-                <div className="text-2xl font-bold text-golden">89%</div>
-                <div className="text-xs text-gray-500 font-medium">ÉXITO</div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition-shadow">
+                <div className="text-3xl font-black text-golden">89%</div>
+                <div className="text-xs text-gray-600 font-semibold uppercase tracking-wider">Tasa de éxito</div>
               </div>
-              <div className="bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-center">
-                <div className="text-2xl font-bold text-golden">4.9★</div>
-                <div className="text-xs text-gray-500 font-medium">RATING</div>
+              <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm text-center hover:shadow-md transition-shadow">
+                <div className="text-3xl font-black text-golden">4.9★</div>
+                <div className="text-xs text-gray-600 font-semibold uppercase tracking-wider">Rating</div>
               </div>
             </div>
 
-            {/* CTA mejorado */}
+            {/* CTA poderoso */}
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton 
                 size="xl" 
-                className="bg-gradient-to-r from-golden to-golden/90 hover:from-golden hover:to-golden shadow-lg hover:shadow-golden/40 transition-all"
+                className="bg-gradient-to-r from-golden to-amber-500 hover:from-amber-500 hover:to-golden text-black font-bold shadow-xl hover:shadow-golden/50 transition-all hover:-translate-y-0.5"
               >
-                🚀 Aplicar al Programa
+                🤑 QUIERO GENERAR +$10K/MES
               </CTAButton>
               <CTAButton 
                 variant="secondary" 
                 size="xl"
-                className="border-gray-300 hover:bg-white/90"
+                className="border-gray-300 bg-white hover:bg-gray-50 font-semibold shadow-sm"
               >
-                Ver Testimonios
+                Ver Resultados Reales
               </CTAButton>
             </div>
           </div>

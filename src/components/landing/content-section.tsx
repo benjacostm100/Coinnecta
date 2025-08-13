@@ -91,11 +91,11 @@ export function ContentSection() {
       {/* Fondo principal */}
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+          src="https://images.unsplash.com/photo-1704354428728-24b8ccab5c3d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80" 
           alt="Fondo de dashboard digital" 
-          className="w-full h-full object-cover opacity-15"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/90 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/80" />
       </div>
 
       {/* Elementos decorativos */}
@@ -122,7 +122,7 @@ export function ContentSection() {
           {modules.map((module, index) => (
             <div 
               key={index}
-              className="relative bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-golden/50 transition-all duration-500 group overflow-hidden"
+              className="relative bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:border-golden/50 transition-all duration-500 group overflow-hidden"
             >
               {/* Imagen de fondo para cada módulo */}
               <div className="absolute inset-0">
