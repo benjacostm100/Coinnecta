@@ -2,9 +2,9 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 border-t border-gray-700 py-16">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12 text-center md:text-left">
           {/* Brand with Logo - Span 2 columns on desktop */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 flex flex-col items-center md:items-start">
             <div className="flex items-center mb-5">
               <img 
                 src="/images/logo2.png" 
@@ -18,7 +18,7 @@ export function Footer() {
             </p>
             
             {/* Social Media */}
-            <div className="flex space-x-4 mb-6">
+            <div className="flex space-x-4 mb-6 justify-center md:justify-start">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-700/50 backdrop-blur-sm border border-gray-600 flex items-center justify-center text-gray-300 hover:text-golden hover:border-golden/50 transition-all hover:bg-gray-700/80">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
@@ -41,7 +41,7 @@ export function Footer() {
               </a>
             </div>
             
-            <div className="flex items-center text-gray-300">
+            <div className="flex items-center text-gray-300 justify-center md:justify-start">
               <svg className="w-5 h-5 mr-3 text-golden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
@@ -52,32 +52,32 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="text-lg font-semibold text-white mb-5 flex items-center">
               <span className="w-3 h-3 bg-golden rounded-full mr-3"></span>
               Enlaces Rápidos
             </h4>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <a href="#inicio" className="hover:text-golden transition-colors flex items-center group">
+                <a href="#inicio" className="hover:text-golden transition-colors flex items-center group justify-center md:justify-start">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Inicio
                 </a>
               </li>
               <li>
-                <a href="#contenido" className="hover:text-golden transition-colors flex items-center group">
+                <a href="#contenido" className="hover:text-golden transition-colors flex items-center group justify-center md:justify-start">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Qué Incluye
                 </a>
               </li>
               <li>
-                <a href="#testimonios" className="hover:text-golden transition-colors flex items-center group">
+                <a href="#testimonios" className="hover:text-golden transition-colors flex items-center group justify-center md:justify-start">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Testimonios
                 </a>
               </li>
               <li>
-                <a href="#faq" className="hover:text-golden transition-colors flex items-center group">
+                <a href="#faq" className="hover:text-golden transition-colors flex items-center group justify-center md:justify-start">
                   <span className="w-2 h-2 bg-golden rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   FAQ
                 </a>
@@ -86,15 +86,15 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h4 className="text-lg font-semibold text-white mb-5 flex items-center">
               <span className="w-3 h-3 bg-golden rounded-full mr-3"></span>
               Newsletter
             </h4>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-300 mb-4 text-center md:text-left">
               Suscríbete para recibir consejos exclusivos y ofertas especiales.
             </p>
-            <form className="flex flex-col space-y-3">
+            <form className="flex flex-col space-y-3 w-full max-w-xs">
               <input 
                 type="email" 
                 placeholder="Tu email" 
@@ -113,10 +113,9 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm order-2 md:order-1">
+            <p className="text-gray-400 text-sm order-2 md:order-1 text-center md:text-left">
               © {new Date().getFullYear()} COINNECTA. Todos los derechos reservados.
             </p>
-            
           </div>
           
           <p className="text-xs text-gray-500 mt-6 text-center md:text-left">
