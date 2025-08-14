@@ -44,7 +44,7 @@ export function ProblemsSection() {
           style={{ opacity: 0.25 }}
         />
         <div 
-          className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/60 to-black/30" 
+          className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/45 to-black/30" 
           style={{ mixBlendMode: "multiply" }}
         />
       </div>

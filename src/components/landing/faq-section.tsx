@@ -50,7 +50,7 @@ export function FAQSection() {
         <img 
           src={sectionBg3} 
           alt="Background" 
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-30"
           loading="lazy"
         />
       </div>
@@ -58,7 +58,7 @@ export function FAQSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Encabezado con estilo premium */}
         <div className="text-center mb-16 lg:mb-24">
-          <span className="inline-block text-xs font-semibold tracking-widest text-golden uppercase mb-4">
+          <span className="inline-block bg-golden/10 px-3 py-1 rounded-full text-xs font-semibold tracking-widest text-golden uppercase mb-4">
             Soporte y Ayuda
           </span>
           <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
