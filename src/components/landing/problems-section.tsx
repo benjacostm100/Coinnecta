@@ -1,32 +1,32 @@
 export function ProblemsSection() {
   const problems = [
     {
-      emoji: "😰",
+      img: "/images/1.png",
       title: "No sabes por dónde empezar",
       description: "Te sientes perdido entre tantas plataformas y estrategias digitales"
     },
     {
-      emoji: "📉",
+      img: "/images/2.png",
       title: "Ventas inconsistentes",
       description: "Algunas semanas vendes, otras no, y no entiendes por qué"
     },
     {
-      emoji: "💸",
+      img: "/images/3.png",
       title: "Dinero perdido en anuncios",
       description: "Inviertes en publicidad pero no ves el retorno esperado"
     },
     {
-      emoji: "⏰",
+      img: "/images/4.png",
       title: "Falta de tiempo",
       description: "Trabajas muchas horas pero sientes que no avanzas lo suficiente"
     },
     {
-      emoji: "🤔",
+      img: "/images/5.png",
       title: "No dominas la tecnología",
       description: "Las herramientas digitales te abruman y te frenan"
     },
     {
-      emoji: "📊",
+      img: "/images/6.png",
       title: "Sin estrategia de upsell",
       description: "Vendes una vez y no sabes cómo maximizar cada cliente"
     }
@@ -82,8 +82,8 @@ export function ProblemsSection() {
               <div className="absolute inset-y-0 left-0 w-1  transition-all duration-300"></div>
               
               <div className="flex flex-col h-full">
-                <div className="w-16 h-16 bg-gradient-to-br from-golden/15 to-golden/5 rounded-xl flex items-center justify-center text-3xl mb-6 mx-auto transition-transform">
-                  {problem.emoji}
+                <div className="w-16 h-16 bg-gradient-to-br from-golden/15 to-golden/5 rounded-xl flex items-center justify-center mb-6 mx-auto transition-transform">
+                  <img src={problem.img} alt={problem.title} className="w-12 h-12 object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-white text-center mb-4 px-4">
                   <span className="bg-gradient-to-r from-golden/30 via-golden/80 to-golden/30 bg-[length:0%_2px] bg-no-repeat bg-left-bottom group-hover:bg-[length:100%_2px] transition-all duration-500">
