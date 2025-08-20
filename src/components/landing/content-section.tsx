@@ -106,14 +106,13 @@ export function ContentSection() {
         {/* Encabezado */}
         <div className="text-center mb-16 lg:mb-20">
           <span className="inline-block bg-golden/20 text-golden px-4 py-2 rounded-full text-xs font-bold tracking-wider mb-4">
-            SISTEMA COMPROBADO
+            TODO LO QUE INCLUYE
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-5">
-            Domina el <span className="text-golden">Upsell en 4 </span><br />
-            Pasos Clave
+            El Método <span className="text-golden">Europeo</span>
           </h2>
           <p className="text-lg text-white/85 max-w-3xl mx-auto">
-            Método probado que ha aumentado ingresos en un <strong className="text-golden">217%</strong> a emprendedores
+            Aprende cómo montamos tiendas de marca, elegimos productos ganadores y lanzamos anuncios que venden desde cero.
           </p>
         </div>
 
@@ -159,6 +158,7 @@ export function ContentSection() {
 
         {/* CTA con temporizador dinámico */}
         <div className="text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Panel de compra</h3>
           <div className="inline-block w-full max-w-2xl bg-gradient-to-r from-black via-black to-golden/20 border border-golden/30 rounded-2xl px-6 py-6 sm:px-10 sm:py-8 mb-8 overflow-hidden relative">
             {/* Sello de urgencia */}
             <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full rotate-12 animate-pulse">
@@ -221,6 +221,10 @@ export function ContentSection() {
               <span>Soporte prioritario</span>
             </div>
           </div>
+
+          <p className="mt-8 text-xs text-white/70 max-w-lg mx-auto">
+            AVISO: Limite de personas por semana para no saturar. ¿Por qué? Para dar el mejor servicio.
+          </p>
         </div>
       </div>
     </section>

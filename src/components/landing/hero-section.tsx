@@ -28,15 +28,22 @@ export function HeroSection() {
           {/* Content - Mejor jerarquía */}
           <div className="text-center lg:text-left animate-fade-in">
             <h1 className="font-display text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-foreground mb-4 lg:mb-6 leading-tight">
-              Convierte tu conocimiento en{" "}
+              DESCUBRE CÓMO GANAR 5000 USD EN MENOS DE 30 DÍAS <br />
               <span className="text-transparent bg-gradient-golden bg-clip-text">
-                ingresos recurrentes
+                O TE PAGAMOS 50 USD
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              Domina el sistema <strong className="text-golden">paso a paso</strong> para crear infoproductos escalables y dominar el <u>upsell</u> incluso si no tienes experiencia.
+              El método europeo que nos hace facturar millones en Europa del Este y en Latinoamérica con contra entrega. Te damos el método al completo y sin secretos con todas las herramientas necesarias.
             </p>
+
+            <ul className="text-muted-foreground mb-6 lg:mb-8 space-y-2 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg">
+              <li>✅ Cómo hacer tu tienda profesional de marca</li>
+              <li>✅ 5 productos ganadores</li>
+              <li>✅ Cómo hacer anuncios de marca</li>
+              <li>✅ De 0 a 100 sin experiencia previa</li>
+            </ul>
             
             {/* CTA mejorado */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 lg:mb-8">
