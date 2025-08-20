@@ -34,15 +34,15 @@ export function CreatorSection() {
           {/* Contenido - Versión potente */}
           <div className="w-full lg:w-1/2 xl:w-7/12">
             <span className="inline-block bg-golden/10 text-golden px-4 py-2 rounded-full text-xs font-bold tracking-wider mb-5 uppercase">
-              El Mentor que multiplicará tus ingresos
+              Los creadores del Método Europeo
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80">Pascu Moreno </span>
-              Formando emprendedores digitales
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80">Pascu</span>, Raúl y Jesús
+              <br />Los únicos europeos en facturar millones en Europa y LATAM
             </h2>
             <div className="prose-xl text-gray-700 mb-8 space-y-4">
               <p>
-                <strong className="text-golden">"Deja de complicarte"</strong> - Aquí está el sistema exacto que usé para generar <strong>$3,700,000+</strong> en ventas y que ahora enseño a mis alumnos.
+                Historia de Pascu: cómo consiguió su primer millón y todo lo que vino después, ahora al alcance de todos con nuestro método.
               </p>
               
               <ul className="space-y-3 pl-5">
