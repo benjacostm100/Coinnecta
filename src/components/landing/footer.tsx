@@ -116,6 +116,19 @@ export function Footer() {
             <p className="text-gray-400 text-sm order-2 md:order-1 text-center md:text-left">
               © {new Date().getFullYear()} COINNECTA. Todos los derechos reservados.
             </p>
+            <div className="flex space-x-4 text-gray-400 text-sm order-1 md:order-2">
+              <a href="/terminos" className="hover:text-golden transition-colors">
+                Términos de Uso
+              </a>
+              <span className="hidden md:block">|</span>
+              <a href="/privacidad" className="hover:text-golden transition-colors">
+                Política de Privacidad
+              </a>
+              <span className="hidden md:block">|</span>
+              <a href="/reembolsos" className="hover:text-golden transition-colors">
+                Política de Reembolsos
+              </a>
+            </div>
           </div>
           
           <p className="text-xs text-gray-500 mt-6 text-center md:text-left">
