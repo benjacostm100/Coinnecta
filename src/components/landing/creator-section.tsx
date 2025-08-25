@@ -10,22 +10,21 @@ export function CreatorSection() {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-10 items-center">
-          {/* Imagen del creador - Versión grande y destacada */}
-          <div className="w-full lg:w-1/2 xl:w-5/12">
-            <div className="relative group">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl border-8 border-white transform group-hover:-translate-y-1 transition-all duration-300">
+          {/* Imagen del creador - Circular y destacada */}
+          <div className="w-full lg:w-1/2 xl:w-5/12 flex justify-center items-center">
+            <div className="relative group flex flex-col items-center">
+              <div className="relative w-60 h-60 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[32rem] lg:h-[32rem] rounded-full overflow-hidden shadow-2xl border-8 border-white transform group-hover:-translate-y-1 transition-all duration-300 bg-gradient-to-br from-golden/10 to-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
+                  src="/images/pascu2.png" 
                   alt="Pascu Moreno - Creador de COINNECTA" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover object-center rounded-full"
                 />
               </div>
-              
               {/* Sellos de credibilidad */}
-              <div className="absolute -bottom-4 -right-4 bg-black text-golden px-5 py-2 rounded-full text-sm font-bold shadow-lg border-2 border-golden">
+              <div className="absolute -bottom-4 right-1/2 translate-x-1/2 bg-black text-golden px-5 py-2 rounded-full text-sm font-bold shadow-lg border-2 border-golden">
                 +$3.7M en ventas
               </div>
-              <div className="absolute -top-4 left-6 bg-golden text-black px-4 py-1 rounded-full text-xs font-bold shadow-md">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-golden text-black px-4 py-1 rounded-full text-xs font-bold shadow-md">
                 TOP 1% Upsells
               </div>
             </div>
