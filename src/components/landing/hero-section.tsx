@@ -23,7 +23,7 @@ export function HeroSection() {
       
       {/* Logo en posición destacada */}
       <div className="absolute top-6 items-center z-20 w-40 lg:w-52">
-        <img src={'images/logo.png'} alt="COINNECTA" className="w-full h-auto" />
+        <img src={'images/logo3.png'} alt="COINNECTA" className="w-full h-auto" />
       </div>
 
       {/* Animated Background Elements - Más sutiles */}
@@ -40,8 +40,13 @@ export function HeroSection() {
                 O TE PAGAMOS 50 USD
               </span>
             </h1>
+            <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+              <span className="inline-block px-3 py-1 rounded-full bg-golden/20 text-golden font-bold text-xs tracking-wider shadow-golden/20 shadow-md animate-fade-in">Método Europeo</span>
+              <span className="inline-block px-3 py-1 rounded-full bg-black/30 text-white font-semibold text-xs tracking-wider shadow-md animate-fade-in">Exclusivo en LATAM</span>
+            </div>
             <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-4 lg:mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-              El método europeo que nos hace facturar millones en Europa del Este y en Latinoamérica con contra entrega. Te damos el método al completo y sin secretos con todas las herramientas necesarias.
+              <span className="font-bold text-golden">El MÉTODO EUROPEO</span> que nos hace facturar millones en Europa del Este y en Latinoamérica con contra entrega.<br />
+              Te damos el método al completo y sin secretos, con todas las herramientas necesarias y estrategias que solo usan los top sellers europeos.
             </p>
             <ul className="text-muted-foreground mb-4 lg:mb-6 space-y-2 max-w-xl mx-auto lg:mx-0 text-sm sm:text-base">
               <li>✅ 5 productos ganadores</li>

@@ -90,20 +90,24 @@ export default function SpotsCard({
       <div className="flex flex-col items-center">
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: 1.08, opacity: 1 }}
           transition={{ type: "spring", stiffness: 140, damping: 16 }}
-          className="rounded-2xl border border-amber-400/30 bg-black/40 px-10 py-6 backdrop-blur"
+          className="relative rounded-3xl border-2 border-amber-400/50 bg-black/60 px-12 py-8 backdrop-blur shadow-amber-400/20 shadow-2xl"
           title={`${available} lugares disponibles`}
           aria-live="polite"
         >
-          <div className="text-7xl sm:text-8xl font-extrabold leading-none tracking-tight">
-            <span className="bg-gradient-to-b from-amber-300 to-amber-500 bg-clip-text text-transparent drop-shadow-[0_8px_28px_rgba(251,191,36,0.45)]">
+          {/* Glow animado detrás del número */}
+          <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+            <div className="w-32 h-32 rounded-full bg-amber-400/20 blur-2xl " />
+          </div>
+          <div className="relative z-10 text-8xl sm:text-9xl font-extrabold leading-none tracking-tight animate-bounce">
+            <span className="bg-gradient-to-b from-amber-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent drop-shadow-[0_8px_28px_rgba(251,191,36,0.45)]">
               {available}
             </span>
           </div>
         </motion.div>
 
-        <p className="mt-3 text-[11px] tracking-[0.22em] text-white/80 font-medium uppercase">
+        <p className="mt-4 text-base sm:text-lg font-bold tracking-wide text-amber-300 uppercase drop-shadow-lg">
           LUGARES DISPONIBLES
         </p>
 
@@ -113,41 +117,55 @@ export default function SpotsCard({
               initial={{ y: -6, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -6, opacity: 0 }}
-              className="mt-3 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-white/5 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur"
+              className="mt-3 inline-flex items-center gap-2 rounded-full border-2 border-amber-400/60 bg-amber-400/10 px-4 py-2 text-sm font-bold text-amber-300 shadow-lg backdrop-blur animate-pulse"
             >
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-300 animate-pulse" />
-              Quedan pocos lugares
+              <span className="inline-block h-2 w-2 rounded-full bg-amber-300 animate-ping" />
+              ¡Quedan pocos lugares!
             </motion.div>
           )}
         </AnimatePresence>
+        {/* Número de lugares ocupados destacado */}
+        <div className="mt-6 text-lg sm:text-xl font-bold text-white/90 bg-black/40 px-4 py-2 rounded-xl border border-amber-400/30 shadow-md flex items-center gap-2">
+          <svg className="w-5 h-5 text-amber-300 animate-pulse" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 .894.553l7 14A1 1 0 0 1 17 18H3a1 1 0 0 1-.894-1.447l7-14A1 1 0 0 1 10 2zm0 4a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1zm0 8a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+          <span className="text-amber-300 font-extrabold">{taken}</span> de <span className="font-bold">{total}</span> lugares ocupados
+        </div>
       </div>
 
       {/* Barra de progreso */}
-      <div className="mx-auto mt-8 w-full max-w-3xl">
-        <div
-          className="relative h-3 w-full overflow-hidden rounded-full border border-white/10 bg-white/10"
-          role="progressbar"
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={Math.round(pct)}
-          aria-label="Cupos ocupados"
-        >
+      <div className="mx-auto mt-8 p-4 w-full max-w-3xl">
+        <div className="relative h-6 w-full overflow-visible flex items-center">
+          {/* Fondo barra */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-6 rounded-full bg-gradient-to-r from-black/60 via-amber-900/20 to-black/80 border border-amber-400/20 shadow-lg" />
+          {/* Barra animada */}
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${pct}%` }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-300"
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-6 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 shadow-amber-400/30 shadow-lg"
+            style={{ width: `${pct}%` }}
           />
-        </div>
-
-        <div className="mt-5 flex flex-col items-center gap-2 text-sm">
-          <div className="font-semibold">
-            {taken} de {total} lugares ocupados
+          {/* Glow urgente si quedan pocos lugares */}
+          {isLow && (
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-amber-400/40 rounded-full blur-xl animate-pulse" />
+          )}
+          {/* Icono de alerta si quedan pocos lugares */}
+          {isLow && (
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center">
+              <svg className="w-6 h-6 text-amber-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 0 1 .894.553l7 14A1 1 0 0 1 17 18H3a1 1 0 0 1-.894-1.447l7-14A1 1 0 0 1 10 2zm0 4a1 1 0 0 0-1 1v4a1 1 0 0 0 2 0V7a1 1 0 0 0-1-1zm0 8a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>
+            </div>
+          )}
+          {/* Texto de porcentaje sobre la barra, destacado y flotante */}
+          <div className="absolute left-1/2 -top-9 -translate-x-1/2 z-10">
+            <span className="px-3 py-1 rounded-full bg-black/80 border border-amber-400/40 text-amber-300 font-bold text-sm shadow-lg backdrop-blur-md">
+              {Math.round(pct)}% ocupado
+            </span>
           </div>
+        </div>
+        <div className="mt-6 flex flex-col items-center gap-2 text-sm">
           {remaining ? (
-            <div className="inline-flex items-center gap-2 rounded-lg border border-amber-400/30 bg-white/5 px-3 py-1 text-xs backdrop-blur">
-              <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-300" />
-              Cierra en{" "}
+            <div className="inline-flex items-center gap-2 rounded-lg border border-amber-400/30 bg-white/5 px-3 py-1 text-base backdrop-blur ">
+              <span className="inline-block h-1.5 w-1.5  rounded-full bg-amber-300" />
+              <span className="font-bold text-amber-300">¡Cupos por cerrar!</span>
               <span className="ml-1 font-bold text-amber-300">
                 {remaining.days}d {remaining.hours}h {remaining.minutes}m {remaining.seconds}s
               </span>

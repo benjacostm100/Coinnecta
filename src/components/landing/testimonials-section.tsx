@@ -20,12 +20,6 @@ export function TestimonialsSection() {
     }
   ];
 
-  const stats = [
-    { number: "1,247+", label: "Estudiantes", icon: "👥" },
-    { number: "89%", label: "Tasa de Éxito", icon: "📈" },
-    { number: "$2M+", label: "Generado", icon: "💰" },
-    { number: "4.9★", label: "Calificación", icon: "⭐" }
-  ];
 
   return (
     <section id="testimonios" className="relative py-16 lg:py-24 bg-white overflow-hidden">
@@ -57,23 +51,6 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Estadísticas con glassmorphism y fondo oscuro */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-16 lg:mb-20">
-          {stats.map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-gray-950/90 backdrop-filter backdrop-blur-lg border border-gray-700 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
-              <div className="text-3xl mb-3 text-golden">{stat.icon}</div>
-              <div className="font-display text-3xl lg:text-4xl font-black text-white mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-300 text-sm font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* Testimonios - Fondo oscuro con glassmorphism */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16 lg:mb-20">
@@ -144,7 +121,6 @@ export function TestimonialsSection() {
                 </svg>
                 Ver Videos de Éxito
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -rotate-45 scale-150"></span>
             </button>
           </div>
         </div>
