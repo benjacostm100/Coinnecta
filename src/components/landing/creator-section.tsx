@@ -33,17 +33,19 @@ export function CreatorSection() {
           {/* Contenido - Versión potente */}
           <div className="w-full lg:w-1/2 xl:w-7/12">
             <span className="inline-block bg-golden/10 text-golden px-4 py-2 rounded-full text-xs font-bold tracking-wider mb-5 uppercase">
-              El Mentor que multiplicará tus ingresos
+              Creadores del Método Europeo
             </span>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80">Pascu Moreno </span>
-              Formando emprendedores digitales
+              Los únicos europeos en facturar millones en Europa y LATAM
             </h2>
+            <p className="text-lg text-gray-700 mb-8">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-golden to-golden/80 font-bold">Pascu Moreno</span> formando emprendedores digitales
+            </p>
             <div className="prose-xl text-gray-700 mb-8 space-y-4">
               <p>
                 <strong className="text-golden">"Deja de complicarte"</strong> - Aquí está el sistema exacto que usé para generar <strong>$3,700,000+</strong> en ventas y que ahora enseño a mis alumnos.
               </p>
-              
+
               <ul className="space-y-3 pl-5">
                 <li className="flex items-start">
                   <span className="text-golden mr-2">▸</span>
@@ -95,6 +97,49 @@ export function CreatorSection() {
               >
                 Ver Resultados Reales
               </CTAButton>
+            </div>
+          </div>
+        </div>
+        {/* Historia de Pascu - Primer millón */}
+        <div className="mt-20 relative">
+          <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-2xl p-8 md:p-12 shadow-xl overflow-hidden">
+            <img
+              src="/images/logo3.png"
+              alt="Planeta Coinnecta"
+              className="absolute -right-20 -top-20 w-80 opacity-10"
+            />
+            <div className="relative z-10">
+              <p className="text-center text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Septiembre 2019</p>
+              <h3 className="text-center text-2xl md:text-3xl font-black text-gray-900 mb-10">
+                Los últimos $20 que lo cambiaron todo
+              </h3>
+              <div className="flex flex-col md:flex-row items-center gap-10">
+                <div className="flex-1 text-gray-700 space-y-4">
+                  <p>
+                    Con apenas <strong>$20</strong> en el bolsillo, Pascu apostó por su visión y lanzó su primer anuncio. En menos de un año transformó esa inversión en su primer millón.
+                  </p>
+                </div>
+                <div className="flex-1">
+                  <ul className="space-y-4">
+                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
+                      <span className="font-medium">Primer mes</span>
+                      <span className="font-bold text-golden">$873 USD</span>
+                    </li>
+                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
+                      <span className="font-medium">Tercer mes</span>
+                      <span className="font-bold text-golden">$4,200 USD</span>
+                    </li>
+                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
+                      <span className="font-medium">Sexto mes</span>
+                      <span className="font-bold text-golden">$12,000 USD</span>
+                    </li>
+                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
+                      <span className="font-medium">Primer año</span>
+                      <span className="font-bold text-golden">Su primer millón</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
