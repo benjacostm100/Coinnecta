@@ -102,39 +102,51 @@ export function CreatorSection() {
         </div>
         {/* Historia de Pascu - Primer millón */}
         <div className="mt-20 relative">
-          <div className="bg-gradient-to-br from-blue-50 via-white to-blue-100 rounded-2xl p-8 md:p-12 shadow-xl overflow-hidden">
+          <div className="bg-gradient-to-br from-golden/10 via-white to-blue-100 rounded-3xl p-8 md:p-14 shadow-2xl border border-golden/30 overflow-hidden animate-fade-in">
             <img
               src="/images/logo3.png"
               alt="Planeta Coinnecta"
-              className="absolute -right-20 -top-20 w-80 opacity-10"
+              className="absolute -right-0 -top-0 w-80 opacity-20 pointer-events-none"
             />
+            <div className="absolute left-10 top-10 w-24 h-24 bg-golden/20 rounded-full blur-2xl opacity-60 pointer-events-none" />
             <div className="relative z-10">
-              <p className="text-center text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Septiembre 2019</p>
-              <h3 className="text-center text-2xl md:text-3xl font-black text-gray-900 mb-10">
-                Los últimos $20 que lo cambiaron todo
-              </h3>
+              <div className="flex flex-col items-center mb-6">
+                <span className="inline-block px-4 py-1 rounded-full bg-golden/20 text-golden font-bold text-xs tracking-wider shadow-golden/20 shadow-md mb-2">Historia real</span>
+                <p className="text-center text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Septiembre 2019</p>
+                <h3 className="text-center text-3xl md:text-4xl font-black text-gray-900 mb-6 bg-gradient-to-r from-golden via-amber-400 to-golden bg-clip-text text-transparent">Los últimos $20 que lo cambiaron todo</h3>
+              </div>
               <div className="flex flex-col md:flex-row items-center gap-10">
                 <div className="flex-1 text-gray-700 space-y-4">
-                  <p>
-                    Con apenas <strong>$20</strong> en el bolsillo, Pascu apostó por su visión y lanzó su primer anuncio. En menos de un año transformó esa inversión en su primer millón.
+                  <p className="text-lg font-medium">
+                    <span className="font-bold text-golden">Con solo $20</span> en el bolsillo, Pascu apostó por su visión y lanzó su primer anuncio. En menos de un año transformó esa inversión en su <span className="font-bold text-golden">primer millón</span>.
                   </p>
+                  <div className="mt-6 flex items-center gap-2">
+                    <span className="inline-block px-3 py-1 rounded-full bg-black/80 border border-golden/40 text-golden font-bold text-xs shadow-lg backdrop-blur-md ">Mentalidad europea</span>
+                    <span className="inline-block px-3 py-1 rounded-full bg-golden/10 text-golden font-semibold text-xs shadow-md animate-fade-in">Upsell desde el día 1</span>
+                  </div>
                 </div>
                 <div className="flex-1">
-                  <ul className="space-y-4">
-                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
-                      <span className="font-medium">Primer mes</span>
+                  <ul className="space-y-6 relative">
+                    {/* Timeline visual */}
+                    <div className="absolute left-2 top-0 h-full w-1 bg-gradient-to-b from-golden/60 via-amber-300/40 to-golden/10 rounded-full" />
+                    <li className="flex items-center gap-4">
+                      <span className="w-5 h-5 rounded-full bg-golden/80 border-2 border-white shadow-lg" />
+                      <span className="font-medium text-gray-800">Primer mes</span>
                       <span className="font-bold text-golden">$873 USD</span>
                     </li>
-                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
-                      <span className="font-medium">Tercer mes</span>
+                    <li className="flex items-center gap-4">
+                      <span className="w-5 h-5 rounded-full bg-golden/70 border-2 border-white shadow-lg" />
+                      <span className="font-medium text-gray-800">Tercer mes</span>
                       <span className="font-bold text-golden">$4,200 USD</span>
                     </li>
-                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
-                      <span className="font-medium">Sexto mes</span>
+                    <li className="flex items-center gap-4">
+                      <span className="w-5 h-5 rounded-full bg-golden/60 border-2 border-white shadow-lg" />
+                      <span className="font-medium text-gray-800">Sexto mes</span>
                       <span className="font-bold text-golden">$12,000 USD</span>
                     </li>
-                    <li className="flex justify-between items-center bg-white/70 backdrop-blur p-4 rounded-xl shadow-sm">
-                      <span className="font-medium">Primer año</span>
+                    <li className="flex items-center gap-4">
+                      <span className="w-5 h-5 rounded-full bg-amber-400 border-2 border-white shadow-lg" />
+                      <span className="font-medium text-gray-800">Primer año</span>
                       <span className="font-bold text-golden">Su primer millón</span>
                     </li>
                   </ul>
